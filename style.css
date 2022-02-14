@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.grid {
+	background-color: #e90418;
+	height: 200px;
+	width: 200px;
+	display: grid;
+	flex-wrap: wrap;
+}
+
+.square {
+	background-color: #faebd7;
+	display: flex;
+	flex-wrap: wrap;
+	height: 25px;
+	width: 25px;
+}
