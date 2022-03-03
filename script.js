@@ -1,3 +1,8 @@
+let paintColor = 'black';
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 let squareSize = 16;
 createGrid(squareSize);
 squarePaint();
@@ -25,13 +30,14 @@ function createGrid(num) {
 }
 
 // paint the divs
-function squarePaint(e) {
+function squarePaint() {
 	const gridSquare = document.querySelectorAll('.square');
-	let clicked = false;
 
 	gridSquare.forEach((square) => {
 		square.addEventListener('mouseenter', (event) => {
-			square.classList.add('drawn');
+			if (mouseDown) {
+				square.style.backgroundColor = paintColor;
+			}
 		});
 	});
 }
