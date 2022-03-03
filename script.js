@@ -1,4 +1,3 @@
-let paintColor = 'black';
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
@@ -36,7 +35,7 @@ function squarePaint() {
 	gridSquare.forEach((square) => {
 		square.addEventListener('mouseenter', (event) => {
 			if (mouseDown) {
-				square.style.backgroundColor = paintColor;
+				square.style.backgroundColor = 'black';
 			}
 		});
 	});
