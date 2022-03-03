@@ -3,18 +3,32 @@
 	padding: 0;
 }
 
-.grid {
-	background-color: #e90418;
-	height: 200px;
-	width: 200px;
+.container {
+	margin: 0 auto;
+	background-color: #bb2424;
 	display: grid;
-	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	width: 505px;
+	height: 505px;
+	border-radius: 10px;
 }
 
-.square {
+#grid {
 	background-color: #faebd7;
 	display: flex;
 	flex-wrap: wrap;
-	height: 25px;
-	width: 25px;
+	width: 500px;
+	height: 500px;
+}
+
+.square {
+	/* background-color: #faebd7; */
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.drawn {
+	background-color: black;
 }
