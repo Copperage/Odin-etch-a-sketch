@@ -1,3 +1,7 @@
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 let squareSize = 16;
 createGrid(squareSize);
 squarePaint();
@@ -31,7 +35,9 @@ function squarePaint(e) {
 
 	gridSquare.forEach((square) => {
 		square.addEventListener('mouseenter', (event) => {
-			square.classList.add('drawn');
+			if (mouseDown) {
+				square.style.backgroundColor = 'black';
+			}
 		});
 	});
 }
