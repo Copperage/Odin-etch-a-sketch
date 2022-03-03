@@ -3,6 +3,26 @@
 	padding: 0;
 }
 
+.button-container {
+	display: flex;
+	flex-direction: row;
+	margin: 20px auto;
+	justify-content: center;
+	gap: 50px;
+}
+
+button {
+	width: 125px;
+	height: 35px;
+	border-radius: 25px;
+	border: none;
+	background-color: #bb2424;
+	color: #faebd7;
+	font-size: 16px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
 .container {
 	margin: 0 auto;
 	background-color: #bb2424;
@@ -16,7 +36,6 @@
 }
 
 #grid {
-	background-color: #faebd7;
 	display: flex;
 	flex-wrap: wrap;
 	width: 500px;

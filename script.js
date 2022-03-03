@@ -1,3 +1,7 @@
+// query selection and init
+let resetButton = document.querySelector('.reset-button');
+let gridButton = document.querySelector('.grid-size');
+
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
@@ -30,7 +34,7 @@ function createGrid(num) {
 
 // paint the divs
 function squarePaint() {
-	const gridSquare = document.querySelectorAll('.square');
+	let gridSquare = document.querySelectorAll('.square');
 
 	gridSquare.forEach((square) => {
 		square.addEventListener('mouseenter', (event) => {
@@ -40,3 +44,15 @@ function squarePaint() {
 		});
 	});
 }
+
+// grid size button functions
+function gridSize() {}
+
+// reset button functions
+resetButton.addEventListener('click', (event) => {
+	let grid = document.querySelectorAll('.square');
+
+	grid.forEach((square) => {
+		square.style.backgroundColor = '#faebd7';
+	});
+});
