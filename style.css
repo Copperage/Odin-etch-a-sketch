@@ -24,11 +24,7 @@
 }
 
 .square {
-	/* background-color: #faebd7; */
+	background-color: #faebd7;
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.drawn {
-	background-color: black;
 }

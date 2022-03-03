@@ -29,9 +29,8 @@ function createGrid(num) {
 }
 
 // paint the divs
-function squarePaint(e) {
+function squarePaint() {
 	const gridSquare = document.querySelectorAll('.square');
-	let clicked = false;
 
 	gridSquare.forEach((square) => {
 		square.addEventListener('mouseenter', (event) => {
