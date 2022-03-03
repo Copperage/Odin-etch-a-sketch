@@ -30,14 +30,8 @@ function squarePaint(e) {
 	let clicked = false;
 
 	gridSquare.forEach((square) => {
-		square.addEventListener('mousedown', (event) => {
-			// square.classList.add('drawn');
-			clicked = true;
-			if (clicked === true) {
-				square.addEventListener('mouseenter', (event) => {
-					square.classList.add('drawn');
-				});
-			}
+		square.addEventListener('mouseenter', (event) => {
+			square.classList.add('drawn');
 		});
 	});
 }
