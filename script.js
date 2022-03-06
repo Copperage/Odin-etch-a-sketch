@@ -1,13 +1,11 @@
 // query selection and init
 let resetButton = document.querySelector('.reset-button');
-let gridButton = document.querySelector('.grid-size');
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-let squareSize = 16;
-createGrid(squareSize);
+GridSize();
 squarePaint();
 
 function createGrid(num) {
@@ -37,7 +35,7 @@ function squarePaint() {
 	let gridSquare = document.querySelectorAll('.square');
 
 	gridSquare.forEach((square) => {
-		square.addEventListener('mouseenter', (event) => {
+		square.addEventListener('mouseover', (event) => {
 			if (mouseDown) {
 				square.style.backgroundColor = 'black';
 			}
@@ -46,7 +44,17 @@ function squarePaint() {
 }
 
 // grid size button functions
-function gridSize() {}
+function GridSize() {
+	let answer = prompt('Please enter your grid size (Max 32)', 16);
+	let answerInt = parseInt(answer);
+
+	if (answer <= 32 && !isNaN(answer)) {
+		squareSize = answerInt;
+	} else if (answer > 32) {
+		answer = alert('Invalid number, please try again!');
+	}
+	createGrid(squareSize);
+}
 
 // reset button functions
 resetButton.addEventListener('click', (event) => {
